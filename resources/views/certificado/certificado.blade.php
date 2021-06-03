@@ -8,24 +8,25 @@
     <img src="/img/certificado_branco.jpg" alt="fundo certificado">
     <title>certificado</title>
     <style>
-        img {
-            width: 100%;
-            height: auto;
-        }
-
+       
         .dados {
             position: absolute;
-            top: 200px;
-            left: 200px;
+            top: 140px;
+            left: 300px;
             display: flex
         }
         .img {
+            
             margin: 40px;
+            position: absolute;
+            top: 120px;
         }
+        
 
         .txts {
-            font-size: 1.5rem;
+            font-size: 1.3rem;
         }
+        
 
     </style>
 </head>
@@ -36,8 +37,8 @@
             @foreach ($certificado as $certificados)@endforeach
 
 
-            <img src="/img/fotos_certificado/{{ $certificados->image }}" alt=""
-                style="width:200px; height:200px; border: 1px solid black; ">
+            <img src="/img/ass.png" alt="assinatura"
+                style="width:150px; height:150px; " id="assinatura">
         </div>
         <div class="txts">
             @foreach ($escola as $escolas)@endforeach
@@ -48,10 +49,12 @@
                 realizada no dia "{{ $certificados->data }}" com "{{ $certificados->horas }}" de duracao</p>
             <br>
             <br>
-            
+            <br>
+            <br>
+            <br>
             <p>Bebedouro, 99 de mes de 9999 <br>
                 Registro n.{{ $certificados->id }}<br> <br>
-                Prof. Senhor diretor da silva<br>
+                Prof.{{$certificados->palestrante}}<br>
                 Diretor da escola técnica.</p>
         </div>
 

@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use App\Models\certificado;
 use App\Models\Escola;
 
+use Barryvdh\DomPDF\PDF;
+
 use App\http\Requests\CertRequest;
 
 
